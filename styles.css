@@ -1,0 +1,114 @@
+:root {
+    --text-color: #3d3d3d;
+    --heading-color: #222;
+    --background-color: #fff;
+    --newsletter-link-border-color: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #c4c4c4;
+        --heading-color: #dedede;
+        --background-color: #000;
+        --newsletter-link-border-color: #999;
+    }
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Georgia, Times, "Times New Roman", serif;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.robin-is-for-sale {
+    padding: 5vh 5vw;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--heading-color);
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 5vh;
+}
+
+@media (min-width: 600px) {
+    .title {
+        font-size: 60px;
+    }
+}
+
+.title__subtitle {
+    color: var(--text-color);
+    display: block;
+    font-size: 16px;
+}
+
+.block-links {
+    margin-bottom: calc(5vh + 10px);
+}
+
+.block-link {
+    line-height: 2;
+    display: inline-block;
+}
+
+.newsletter__text {
+    margin-bottom: 1em;
+}
+
+.newsletter__link {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid var(--newsletter-link-border-color);
+
+    text-decoration: none;
+
+    margin-bottom: 2vh;
+
+    transition: background-color .3s ease-in-out;
+}
+
+.newsletter__link:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px var(--newsletter-link-border-color);
+}
